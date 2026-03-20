@@ -39,7 +39,10 @@ export default function Onboarding() {
       // Guard against non-JSON responses (e.g. Vercel 504 timeout returns HTML)
       const contentType = res.headers.get('content-type') ?? '';
       if (!contentType.includes('application/json')) {
-        throw new Error(`Server error (${res.status}). Check that your API keys are set in Vercel.`);
+        const msg = res.status === 504
+          ? 'Request timed out. This usually resolves on the next attempt as the function warms up.'
+          : `Server error (${res.status}). Check that your API keys are set in Vercel.`;
+        throw new Error(msg);
       }
 
       const data = await res.json();
