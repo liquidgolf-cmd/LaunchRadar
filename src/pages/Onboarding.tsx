@@ -35,15 +35,22 @@ export default function Onboarding() {
           target_user: targetUser,
         }),
       });
+
+      // Guard against non-JSON responses (e.g. Vercel 504 timeout returns HTML)
+      const contentType = res.headers.get('content-type') ?? '';
+      if (!contentType.includes('application/json')) {
+        throw new Error(`Server error (${res.status}). Check that your API keys are set in Vercel.`);
+      }
+
       const data = await res.json();
       if (!res.ok) throw new Error(data.error ?? 'Extraction failed');
       setKeywords(data.keywords);
       setKeywordsReady(true);
     } catch (err) {
       setExtractError(err instanceof Error ? err.message : 'Something went wrong');
+    } finally {
+      setExtracting(false);
     }
-
-    setExtracting(false);
   };
 
   const handleSave = async () => {

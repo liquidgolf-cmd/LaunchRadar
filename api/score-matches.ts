@@ -56,7 +56,7 @@ Return ONLY a JSON array with one object per post in order:
 [{"score": 75, "response_angle": "..."}, {"score": 20, "response_angle": null}, ...]`;
 
   const message = await client.messages.create({
-    model: 'claude-sonnet-4-20250514',
+    model: 'claude-sonnet-4-6',
     max_tokens: 1024,
     messages: [{ role: 'user', content: prompt }],
   });
