@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import { scanReddit } from './scan-reddit';

@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 import { createClient } from '@supabase/supabase-js';
 
 // Scans Hacker News Ask HN posts via Algolia API (no auth required).

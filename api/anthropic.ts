@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 import Anthropic from '@anthropic-ai/sdk';
 
 // General-purpose Claude proxy for client-side requests.

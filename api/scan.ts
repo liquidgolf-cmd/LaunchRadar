@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 import { scanReddit } from './scan-reddit';
 import { scanHN } from './scan-hn';
 import { scanIH } from './scan-ih';

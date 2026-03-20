@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 import Anthropic from '@anthropic-ai/sdk';
 
 // Called from the client during app onboarding.
@@ -40,8 +42,8 @@ Example: ["cant get my app noticed", "indie developer no users", "how to market 
   try {
     const client = new Anthropic({ apiKey });
     const message = await client.messages.create({
-      model: 'claude-haiku-4-5-20251001', // Haiku: ~1-2s response, fits Hobby plan 10s limit
-      max_tokens: 256,
+      model: 'claude-sonnet-4-6',
+      max_tokens: 512,
       messages: [{ role: 'user', content: prompt }],
     });
 

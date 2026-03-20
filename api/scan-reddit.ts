@@ -1,3 +1,5 @@
+export const maxDuration = 60;
+
 import { createClient } from '@supabase/supabase-js';
 
 // TODO: Add REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET to env vars when available.
