@@ -12,13 +12,13 @@
     }
   ],
   "functions": {
-    "api/anthropic.ts":       { "maxDuration": 60 },
-    "api/extract-keywords.ts": { "maxDuration": 60 },
-    "api/scan.ts":             { "maxDuration": 60 },
-    "api/scan-reddit.ts":      { "maxDuration": 60 },
-    "api/scan-hn.ts":          { "maxDuration": 60 },
-    "api/scan-ih.ts":          { "maxDuration": 60 },
-    "api/score-matches.ts":    { "maxDuration": 60 },
-    "api/digest.ts":           { "maxDuration": 60 }
+    "api/anthropic.ts":        { "maxDuration": 300 },
+    "api/extract-keywords.ts": { "maxDuration": 300 },
+    "api/scan.ts":             { "maxDuration": 300 },
+    "api/scan-reddit.ts":      { "maxDuration": 300 },
+    "api/scan-hn.ts":          { "maxDuration": 300 },
+    "api/scan-ih.ts":          { "maxDuration": 300 },
+    "api/score-matches.ts":    { "maxDuration": 300 },
+    "api/digest.ts":           { "maxDuration": 300 }
   }
 }
